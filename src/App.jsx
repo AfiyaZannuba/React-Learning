@@ -1,15 +1,17 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
-
+import Greeting from "./components/Greeting";
+import ProductInfo from "./components/ProductInfo";
 
 const App = () => {
-  return(
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+  const myName = "Afiya Zannuba";
+  const myFriends = [ 'Afiya', 'Alex', 'John'];
+  const multiply = (a,b) => a*b;
+  const specialClass = "simple-class";
+
+  return (
+    <section>
+      <Greeting />
+      <ProductInfo />
+    </section>
   )
 }
 
