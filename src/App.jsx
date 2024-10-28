@@ -1,9 +1,14 @@
-import Greet from "./components/Greet"
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+
 
 const App = () => {
-  reyurn(
+  return(
     <div>
-      <Greet />
+      <Header />
+      <Main />
+      <Footer />
     </div>
   )
 }
