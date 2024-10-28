@@ -2,13 +2,31 @@
 // import ProductInfo from "./components/ProductInfo";
 
 const App = () => {
-  const numbers = [ 1, 2, 3, 4, 5];
+  const userInfo = [
+    {
+      username: "Afiya",
+      email: "afiya.zannuba@gmail.com",
+      location: "Palakkad"
+    },
+    {
+      username: "Zannuba",
+      email: "zannuba.afiya@gmail.com",
+      location: "Kakkanad"
+    },
+    {
+      username: "Jaleel",
+      email: "jaleel@gmail.com",
+      location: "Kochi"
+    }
+  ]
 
   return (
     <main>
-      {numbers.map((number) => (
-        <ul key={number}>
-          <li>{number}</li>
+      {userInfo.map((user) => (
+        <ul key={Math.random()}>
+          <li>{user.username}</li>
+          <li>{user.email}</li>
+          <li>{user.location}</li>
         </ul>
       ))}
     </main>
