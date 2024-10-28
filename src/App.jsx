@@ -1,8 +1,12 @@
-import UserList from "./components/userList";
+import ProductList from "./components/ProductList";
+// import UserList from "./components/userList";
 
 const App = () => {
   return (
-    <UserList />
+    <main>
+      {/* <UserList /> */}
+      <ProductList />
+    </main>
   )
 }
 
