@@ -1,12 +1,17 @@
-import Person from "./components/Person";
-import Product from "./components/Product";
+import Card from "./components/Card";
 
 const App = () => {
   return (
-    <main>
-    <Person name="Reyas" age="35" />
-    <Product name="Laptop" price="$1500"/>
-    </main>
+    <div>
+      <Card>
+        <h1>My Card Title</h1>
+        <p>My Card-1 Details</p>
+      </Card>
+      <Card>
+        <h1>My Card-2 Title</h1>
+        <p>My Card-2 Details</p>
+      </Card>
+    </div>
   )
 }
 
