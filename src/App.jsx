@@ -1,19 +1,30 @@
-import Card from "./components/Card";
+const Button = () => {
+  const handleClick = () => console.log(Math.round(Math.random() * 10));
+  return <button onClick={handleClick}>Click Me</button>
+}
 
-const App = () => {
-  return (
-    <div>
-      <Card>
-        <h1>My Card Title</h1>
-        <p>My Card-1 Details</p>
-      </Card>
-      <Card>
-        <h1>My Card-2 Title</h1>
-        <p>My Card-2 Details</p>
-      </Card>
-    </div>
+const Copy = () => {
+  const handleCopy = () => console.log(Math.round(Math.random()*10))
+  return(
+    <p onCopy={handleCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor quos repudiandae reiciendis tempora ducimus voluptatibus voluptates laudantium nobis aliquam.</p>
   )
 }
 
+const  Move = () => {
+  const handleMove = () => alert("Mouse move event fired");
+  return (
+    <p onMouseMove={handleMove}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, eveniet.</p>
+  )
+}
 
-export default App;
+const App = () => {
+  return (
+    <section>
+      <Button />
+      <Copy />
+      <Move />
+    </section>
+  )
+}
+
+export default App
