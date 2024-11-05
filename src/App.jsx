@@ -5,39 +5,18 @@
 import { useState } from "react"
 
 const App = () => {
-
-  const [friends, setFriends] = useState(['Alex', 'Afiya'])
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount (count + 1);
-  }
-  const decrement = () => {
-    if (count>0){
-    setCount (count - 1);
-    }
-  }
-  const AddFriend = () => {
-    setFriends([...friends, "Allen"])
-  }
-  const RemoveFriend = () => {
-    setFriends(friends.filter((f)=> (f != "Allen")))
-  }
-  const UpDatefriend = () => {
-    setFriends(friends.map((f)=>(f==="Afiya" ? "Afiya Zannuba" : f)));
+  const [movie, setMovie] = useState({
+    title: "Aram",
+    ratings: 9,
+  })
+  const handleClick = () => {
+    setMovie({...movie, ratings:5})
   }
   return (
     <section>
-      <h1>{count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-      <br />
-      {friends.map((friend)=>(
-        <li key={Math.round(Math.random()*10)}>{friend}</li>
-      ))}
-
-      <button onClick={AddFriend}>Add a New Friend</button>
-      <button onClick={RemoveFriend}>Remove specific Friend</button>
-      <button onClick={UpDatefriend}>Update</button>
+      <h1>Title: {movie.title}</h1>
+      <p>Ratings: {movie.ratings}</p>
+      <button onClick={handleClick}>Update Rating</button>
     </section>
   )
 }
