@@ -1,11 +1,18 @@
+import Counter from "./components/Counter"
+import Profile from "./Profile"
+import ShoppingList from "./ShoppingList"
+import Todolist from "./Todolist"
 
-import ExampleOne from "./components/ExampleOne"
+
 
 
 const App = () => {
   return (
     <section>
-     <ExampleOne />
+      {/* <Counter /> */}
+      {/* <Todolist /> */}
+      {/* <Profile /> */}
+      <ShoppingList />
     </section>
   )
 }
