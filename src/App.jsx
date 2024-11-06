@@ -5,26 +5,30 @@ import { useState, useEffect } from "react"
 
 const App = () => {
 
-  const [value, setValue] = useState(0);
-  const [something, setSomething] = useState(0)
-
-  const handleClick = () => {
-    setValue(value + 1)
-  }
-  const handleClicks = () => {
-    setSomething(something + 1)
-  }
+  const [data, setData] = useState([]);
 
   useEffect(()=>{
-    console.log('call useEffect');
-    document.title= `Increment ${value}`
-  }, [value])
 
+    async function getData(){
+      const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+      const data = await response.json()
+      if (data && data.length){
+        setData(data);
+      }
+    }
+
+    getData();
+
+  },[])
   return (
     <section>
-    <h2>{value}</h2>
-    <button onClick={handleClick}>Click Me</button>
-    <button onClick={handleClicks}>Increment Me</button>
+     {data.map((item)=>(
+      <ul key={Math.random()}>
+      <li>
+        {item.title}
+      </li>
+      </ul>
+     ))}
     </section>
   )
 }
