@@ -1,14 +1,12 @@
 import React from 'react'
+import { useContext } from 'react';
 import { Data } from './App';
 
 const ComponentC = () => {
+    const username = useContext(Data)
   return (
     <div>
-        <Data.Consumer>
-            {(name)=>{
-                return <h1>{name}</h1>
-            }}
-        </Data.Consumer>
+       <h1>My Name is : {username}</h1>
     </div>
   )
 }
