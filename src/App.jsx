@@ -1,15 +1,13 @@
-import { useEffect } from "react"
-import BasicEffect from "./components/BasicEffect"
-import CounterEffect from "./components/CounterEffect"
-import FetchData from "./components/FetchData"
+import React from 'react'
+import ComponentA from './ComponentA'
 
 const App = () => {
+
+  const name = "Afiya"
   return (
-    <section>
-      {/* <BasicEffect /> */}
-      {/* <CounterEffect /> */}
-      <FetchData />
-    </section>
+    <div>
+      <ComponentA name={name}/>
+    </div>
   )
 }
 
